@@ -1,0 +1,23 @@
+/* Fonts section */
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+}
+
+$defaultFont: 'Noto Sans', sans-serif;
+
+/* Colors section */
+$backgroundColor: #393D3F;
+$textColor: #FDFDFF;
+$primaryColor: #C6C5B9;
+$secondaryColor: #62929E;
+$whiteTextColor: #FFFFFFDD;
+
+$sidenavBackgroundColor: darken($backgroundColor, 10%);
+$sidenavColor: darken($textColor, 10%);
+
+/*Screen size*/
+$screenFullHD: 1919px;
+$screenHD: 1365px;
+$screenTablet: 1079px;
+$screenMobile: 799px;

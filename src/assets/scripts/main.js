@@ -1,16 +1,14 @@
-/**
- * Import dependencies from node_modules
- * see commented examples below
- */
+const menuToggleOpen = document.getElementById('menu-toggle-open');
+const menuToggleClose = document.getElementById('menu-toggle-close');
+const nav = document.getElementById("menu-nav");
 
-// import 'some-node-module';
-// import SomeModule from 'some-node-module';
 
-/**
- * Write any other JavaScript below
- */
+menuToggleOpen.addEventListener('click', () => {
+  nav.classList.remove('hidden');
+  menuToggleOpen.classList.add('hidden');
+});
 
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
+menuToggleClose.addEventListener('click', () => {
+  nav.classList.add('hidden')
+  menuToggleOpen.classList.remove('hidden');
+});
