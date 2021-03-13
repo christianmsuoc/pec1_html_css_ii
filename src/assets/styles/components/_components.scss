@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* SMALL DISPLAYS */
+  @media (max-width: $screenTablet) {
+    min-height: 8vh;
+
+    .desktop-nav {
+      display: none;
+    }
+
+    button.navbar-menu-button {
+      background-color: $mainBackgroundColor;
+      border: solid 1px $secondaryTextColor;
+      color: $secondaryTextColor;
+      padding: 10px;
+    }
+  }
+
+  /* BIG DISPLAYS */
+  @media (min-width: $screenTablet + 1) {
+    .mobile-nav {
+      display: none;
+    }
+  }
+}

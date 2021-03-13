@@ -1,14 +1,4 @@
-const menuToggleOpen = document.getElementById('menu-toggle-open');
-const menuToggleClose = document.getElementById('menu-toggle-close');
-const nav = document.getElementById("menu-nav");
+const menuButton = document.getElementById('navbar-menu-button');
+const mobileNav = document.getElementById('mobile-nav');
 
-
-menuToggleOpen.addEventListener('click', () => {
-  nav.classList.remove('hidden');
-  menuToggleOpen.classList.add('hidden');
-});
-
-menuToggleClose.addEventListener('click', () => {
-  nav.classList.add('hidden')
-  menuToggleOpen.classList.remove('hidden');
-});
+menuButton.addEventListener('click', () => mobileNav.classList.toggle('no-display'));

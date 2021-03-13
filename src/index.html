@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.css"><!-- do not remove this line! -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <title>Christian Muñiz Sobradelo</title>
 </head>
@@ -11,8 +11,20 @@
 
 
 <header>
-    <div class="logo"></div>
-    <nav id="menu-nav" class="hidden">
+    <p>ChristianMS</p>
+    <button id="navbar-menu-button" class="navbar-menu-button"> MENU </button>
+    <nav id="mobile-nav" class="no-display">
+        <ul>
+            <li><a href="#personal-information">Información personal</a></li>
+            <li><a href="#work-history">Historia Laboral</a></li>
+            <li><a href="#formation">Formación</a></li>
+            <li><a href="#technologies">Tecnologías</a></li>
+            <li><a href="#extra">Extra</a></li>
+        </ul>
+    </nav>
+
+
+    <nav class="desktop-nav">
         <ul>
             <li><a href="#personal-information">Información personal</a></li>
             <li><a href="#work-history">Historia Laboral</a></li>

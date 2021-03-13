@@ -7,17 +7,17 @@
 $defaultFont: 'Noto Sans', sans-serif;
 
 /* Colors section */
-$backgroundColor: #393D3F;
-$textColor: #FDFDFF;
-$primaryColor: #C6C5B9;
-$secondaryColor: #62929E;
-$whiteTextColor: #FFFFFFDD;
+$mainBackgroundColor: rgba(0 0 0 / 089);
+$secondaryBackgroundColor: #2F2F2F;
+$primaryTextColor: #FCFCFC;
+$secondaryTextColor: #D2F898;
+$whiteTextColor: #FFF;
 
-$sidenavBackgroundColor: darken($backgroundColor, 10%);
-$sidenavColor: darken($textColor, 10%);
+$sidenavBackgroundColor: darken($mainBackgroundColor, 10%);
+$sidenavColor: darken($primaryTextColor, 10%);
 
 /*Screen size*/
-$screenFullHD: 1919px;
-$screenHD: 1365px;
-$screenTablet: 1079px;
-$screenMobile: 799px;
+$screenFullHD: 1920px;
+$screenHD: 1366px;
+$screenTablet: 1080px;
+$screenMobile: 800px;
