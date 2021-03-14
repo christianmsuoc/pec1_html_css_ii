@@ -11,11 +11,12 @@
 
 
 <header>
-    <h2>ChristianMS</h2>
+    <h2><a href="#main">ChristianMS</a></h2>
     <div class="mobile-nav-section">
         <button id="navbar-menu-button" class="navbar-menu-button"> MENU</button>
         <nav id="mobile-nav" class="no-display">
             <ul>
+                <li><a href="#main">Inicio</a></li>
                 <li><a href="#personal-information">Información personal</a></li>
                 <li><a href="#work-history">Historia Laboral</a></li>
                 <li><a href="#formation">Formación</a></li>
@@ -28,6 +29,7 @@
 
     <nav class="desktop-nav">
         <ul>
+            <li><a href="#main">INICIO</a></li>
             <li><a href="#personal-information">INFORMACIÓN PERSONAL</a></li>
             <li><a href="#work-history">HISTORIA LABORAL</a></li>
             <li><a href="#formation">FORMACIÓN</a></li>
@@ -38,8 +40,8 @@
 </header>
 
 
-<main>
-    <section class="presentation">
+<main id="main">
+    <section class="section-presentation">
         <div class="presentation-text">
             <h1 class="name-title">Christian Muñiz Sobradelo</h1>
             <p>Developer en <a href="https://evelb.es/">Evelb</a></p>
@@ -54,23 +56,37 @@
 
     <hr>
 
-    <section id="personal-information" class="">
+    <section id="personal-information" class="section-personal-information">
+        <p>Desarrollador de software Fullstack, utilizando Java y Spring como backend y Angular como frontend.</p>
+        <p>Interesado en la arquitectura de software y DevOps. Firme defensor de los principios KISS y DRY, así como de la
+        filosofía Clean Code.</p>
+    </section>
+
+    <hr>
+
+    <section id="work-history" class="timeline-section">
+        <h2>Historia Laboral</h2>
+        <div class="timeline-entry">
+            <div class="timeline">
+                <small>Actualidad</small>
+                <hr class="vertical-hr">
+                <small>10/2021</small>
+            </div>
+            <div class="text">
+                <p>Evelb Técnicas y Sistemas</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="formation" class="section-formation">
 
     </section>
 
-    <section id="work-history" class="">
+    <section id="technologies" class="section-technologies">
 
     </section>
 
-    <section id="formation" class="">
-
-    </section>
-
-    <section id="technologies" class="">
-
-    </section>
-
-    <section id="extra" class="">
+    <section id="extra" class="section-extra">
 
     </section>
 

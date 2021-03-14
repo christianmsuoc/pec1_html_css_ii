@@ -13,7 +13,7 @@ header {
   }
 
   /* SMALL DISPLAYS */
-  @media (max-width: $screenTablet) {
+  @media (max-width: $screenMobile + 1) {
     nav.desktop-nav {
       display: none;
     }
@@ -47,7 +47,7 @@ header {
   }
 
   /* BIG DISPLAYS */
-  @media (min-width: $screenTablet + 1) {
+  @media (min-width: $screenMobile + 1) {
     .mobile-nav-section {
       display: none;
     }
@@ -63,16 +63,16 @@ header {
 }
 
 main {
-  section.presentation {
-    @media (max-width: $screenTablet) {
+  section.section-presentation {
+    @media (max-width: $screenMobile + 1) {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
 
       .presentation-text {
         display: flex;
         flex-direction: column;
-        flex: 2;
+        flex: 1;
         align-items: flex-end;
         padding-right: 15px;
 
@@ -81,9 +81,7 @@ main {
           font-size: 14px;
         }
 
-        h1 {
-          font-size: 16px;
-        }
+
       }
 
       .presentation-image {
@@ -102,6 +100,38 @@ main {
         p {
           margin-top: 10px;
         }
+      }
+    }
+  }
+
+  section.section-personal-information {
+    p {
+      font-size: 14px;
+      padding: 5px 8%;
+    }
+  }
+
+  section.timeline-section {
+    div.timeline-entry {
+      display: flex;
+      flex-flow: row;
+      margin-top: 10px;
+
+      div.timeline {
+        flex: 1;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+      hr {
+        border-color: darken($primaryTextColor, 50%);
+      }
+
+      div.text {
+        flex: 2;
+        justify-content: center;
       }
     }
   }

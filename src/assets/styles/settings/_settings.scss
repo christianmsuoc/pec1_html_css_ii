@@ -17,7 +17,5 @@ $sidenavBackgroundColor: darken($mainBackgroundColor, 10%);
 $sidenavColor: darken($primaryTextColor, 10%);
 
 /*Screen size*/
-$screenFullHD: 1920px;
-$screenHD: 1366px;
-$screenTablet: 1080px;
-$screenMobile: 800px;
+$screenTablet: 991px;
+$screenMobile: 479px;
