@@ -33,8 +33,17 @@ body {
     padding: 0 5px;
     min-width: 100vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
     justify-items: flex-end;
     justify-content: center;
+
+    hr {
+      margin: 20px 0;
+      border: solid 1px $secondaryTextColor;
+      color: $secondaryTextColor;
+      width: 80vw;
+      justify-self: center;
+    }
   }
 }
