@@ -10,14 +10,14 @@ body {
   @media (max-width: $screenMobile) {
     h1 {
       font-size: 15px;
-      font-weight: 600;
+      font-weight: 700;
       color: $primaryTextColor;
     }
 
     h2 {
       font-size: 14px;
-      font-weight: 500;
-      color: $secondaryTextColor;
+      font-weight: 600;
+      color: darken($secondaryTextColor, 10%);
     }
   }
 
@@ -39,7 +39,7 @@ body {
     position: fixed;
     top: 0;
     width: 100vw;
-    color: $secondaryTextColor;
+    color: darken($secondaryTextColor, 10%);
     background-color: $secondaryBackgroundColor;
     display: flex;
     box-shadow: 1px 1px lighten($secondaryBackgroundColor, 5%);
@@ -60,6 +60,12 @@ body {
       margin: 20px 15%;
       border: solid 1px darken($primaryTextColor, 70%);
       color: $secondaryTextColor;
+    }
+  }
+
+  * {
+    i {
+      margin: 0 10px;
     }
   }
 

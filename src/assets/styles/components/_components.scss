@@ -115,7 +115,7 @@ main {
     div.timeline-entry {
       display: flex;
       flex-flow: row;
-      margin-top: 10px;
+      margin: 30px 0;
 
       div.timeline {
         flex: 1;
@@ -129,9 +129,42 @@ main {
         border-color: darken($primaryTextColor, 50%);
       }
 
-      div.text {
-        flex: 2;
+      div.timeline-section-text {
+        flex: 3;
         justify-content: center;
+        align-self: center;
+
+        p {
+          margin-top: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  section.section-technologies {
+    display: flex;
+    flex-flow: row wrap;
+
+    h2 {
+      flex: 100%;
+      margin-bottom: 20px;
+    }
+
+    .technology-row {
+      flex: 2;
+      padding: 0 10px;
+      font-size: 16px;
+
+      span {
+        padding: 0 10px 0 0;
+      }
+
+      i {
+        margin: 0;
+        padding: 0;
+        color: #FD0;
+        font-size: 12px;
       }
     }
   }
