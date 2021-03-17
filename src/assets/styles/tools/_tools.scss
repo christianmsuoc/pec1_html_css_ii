@@ -6,3 +6,9 @@
   height: 20px;
   width: 1px;
 }
+
+hr.small-display {
+  @media (min-width: $screenTablet) {
+    display: none;
+  }
+}

@@ -4,23 +4,18 @@ header {
   align-items: center;
   min-height: 8vh;
 
-  h2 {
-    font-size: 1rem;
-  }
-
   li a {
     font-weight: 600;
   }
 
   /* SMALL DISPLAYS */
-  @media (max-width: $screenMobile + 1) {
+  @media (max-width: $screenTablet) {
     nav.desktop-nav {
       display: none;
     }
 
     div.mobile-nav-section {
       position: relative;
-      display: inline-block;
 
       nav {
         display: block;
@@ -36,153 +31,105 @@ header {
           padding: 5px 0;
         }
       }
-    }
 
-    button.navbar-menu-button {
-      background-color: $mainBackgroundColor;
-      border: solid 1px $secondaryTextColor;
-      color: $secondaryTextColor;
-      padding: 10px 20px;
+      button.navbar-menu-button {
+        background-color: $mainBackgroundColor;
+        border: solid 1px $secondaryTextColor;
+        color: $secondaryTextColor;
+        padding: 10px 20px;
+      }
     }
   }
 
   /* BIG DISPLAYS */
-  @media (min-width: $screenMobile + 1) {
+  @media (min-width: $screenTablet) {
     .mobile-nav-section {
-      display: none;
+      display: none !important;
     }
 
-    .desktop-nav ul {
+    nav.desktop-nav {
       display: flex;
+      flex-direction: row;
 
-      li {
-        padding: 0 10px;
+      ul {
+        display: flex;
+
+        li {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screenTablet + 1) {
+  main {
+    display: flex;
+    flex-flow: row wrap;
+
+    section {
+      &.section-presentation {
+        width: 100%;
+        align-self: center;
+      }
+
+      &.timeline-section,
+      &.section-technologies,
+      &.section-courses,
+      &.section-languages,
+      &.section-extra {
+        flex: 40%;
+        border: solid $primaryTextColor 1px;
+        border-radius: 30px;
+        padding: 50px;
+        background-color: $secondaryBackgroundColor;
+        width: 40%;
+        margin: 20px;
       }
     }
   }
 }
 
 main {
-  section.section-presentation {
-    @media (max-width: $screenMobile + 1) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .presentation-text {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        align-items: flex-end;
-        padding-right: 15px;
-
-        * {
-          padding: 10px 0;
-          font-size: 14px;
-        }
-
-
-      }
-
-      .presentation-image {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-
-        img {
-          width: 150px;
-          height: 160px;
-          border-radius: 50%;
-          shape-outside: circle();
-        }
-
-        p {
-          margin-top: 10px;
-        }
-      }
-    }
-  }
-
   section.section-personal-information {
+    display: flex;
+    flex-direction: column;
+
     p {
-      font-size: 14px;
       padding: 5px 8%;
     }
-  }
 
-  section.timeline-section {
-    div.timeline-entry {
+    @media (min-width: $screenTablet + 1) {
+      align-items: center;
+      justify-content: center;
+      align-self: center;
       display: flex;
-      flex-flow: row;
-      margin: 30px 0;
+      width: 70%;
+      margin: 50px;
 
-      div.timeline {
-        flex: 1;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
+      p {
+        padding: 15px 0;
       }
-
-      hr {
-        border-color: darken($primaryTextColor, 50%);
-      }
-
-      div.timeline-section-text {
-        flex: 3;
-        justify-content: center;
-        align-self: center;
-
-        p {
-          margin-top: 5px;
-          font-size: 12px;
-        }
-      }
-    }
-  }
-
-  section.section-technologies {
-    display: flex;
-    flex-flow: row wrap;
-    padding: 0 5px;
-
-    h2 {
-      flex: 100%;
-      margin-bottom: 20px;
-    }
-
-    .technology-row {
-      flex: 2;
-      display: flex;
-      padding: 5px;
-      font-size: 16px;
-      min-width: 40%;
-      justify-content: space-between;
-
-      div {
-        flex: 1;
-        display: flex;
-
-        i {
-          margin: 0;
-          padding: 0;
-          color: #FD0;
-          font-size: 16px;
-        }
-      }
-
     }
   }
 
   section.section-courses {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+
+    @media (max-width: $screenMobile) {
+      justify-content: flex-start;
+    }
 
     h2 {
       padding: 20px;
     }
+
+    @media (min-width: $screenMobile + 1) {
+      justify-items: center;
+      align-items: center;
+    }
+
     p {
       margin-left: 20px;
       display: flex;
@@ -203,6 +150,7 @@ main {
     h2 {
       padding: 20px;
     }
+
     p {
       margin-left: 20px;
       display: flex;
@@ -223,11 +171,157 @@ main {
     h2 {
       padding-bottom: 20px;
     }
+
     p {
       margin-left: 20px;
       justify-content: center;
       margin-bottom: 15px;
-      font-size: 14px;
+    }
+  }
+
+  section.section-presentation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: $screenMobile + 1) {
+      flex-direction: row-reverse;
+    }
+
+    .presentation-text {
+      display: flex;
+      flex-direction: column;
+
+      * {
+        padding: 10px 0;
+      }
+
+      @media (max-width: $screenMobile) {
+        flex: 1;
+        padding-right: 5px;
+
+      }
+      @media (min-width: $screenMobile + 1) {
+        padding-right: 50px;
+
+      }
+    }
+
+    .presentation-image {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+      img {
+        border-radius: 50%;
+        shape-outside: circle();
+      }
+
+      @media (max-width: $screenMobile) {
+        flex-direction: column;
+
+        img {
+          width: 150px;
+          height: 160px;
+        }
+
+        p {
+          margin-top: 10px;
+        }
+      }
+
+      @media (min-width: $screenMobile + 1) {
+        flex-direction: row-reverse;
+        align-items: center;
+
+        img {
+          width: 225px;
+          height: 240px;
+        }
+
+        p {
+          margin-right: 50px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+
+  section.timeline-section {
+    h2 {
+      width: 100%;
+    }
+
+    div.timeline-entry {
+      display: flex;
+      flex-flow: row;
+      margin: 30px 0;
+
+      div.timeline {
+        flex: 1;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      hr {
+        border-color: darken($primaryTextColor, 50%);
+      }
+
+      div.timeline-section-text {
+        flex: 3;
+        justify-content: center;
+        align-self: center;
+
+        p {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  section.section-technologies {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 1;
+
+    @media (max-width: $screenTablet) {
+      padding: 0 5px;
+    }
+
+    h2 {
+      flex: 100%;
+      margin-bottom: 20px;
+    }
+
+    .technology-row {
+      flex: 1;
+      display: flex;
+      padding: 5px;
+      min-width: 40%;
+      justify-content: center;
+
+      @media (min-width: $screenMobile + 1) {
+        max-width: 45%;
+      }
+
+      div {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        i {
+          margin: 0;
+          padding: 0;
+          color: #FD0;
+        }
+      }
+
     }
   }
 }
