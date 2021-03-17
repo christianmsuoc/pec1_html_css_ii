@@ -145,6 +145,7 @@ main {
   section.section-technologies {
     display: flex;
     flex-flow: row wrap;
+    padding: 0 5px;
 
     h2 {
       flex: 100%;
@@ -153,19 +154,80 @@ main {
 
     .technology-row {
       flex: 2;
-      padding: 0 10px;
+      display: flex;
+      padding: 5px;
       font-size: 16px;
+      min-width: 40%;
+      justify-content: space-between;
+
+      div {
+        flex: 1;
+        display: flex;
+
+        i {
+          margin: 0;
+          padding: 0;
+          color: #FD0;
+          font-size: 16px;
+        }
+      }
+
+    }
+  }
+
+  section.section-courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h2 {
+      padding: 20px;
+    }
+    p {
+      margin-left: 20px;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 15px;
 
       span {
-        padding: 0 10px 0 0;
+        margin: 0 5px;
       }
+    }
+  }
 
-      i {
-        margin: 0;
-        padding: 0;
-        color: #FD0;
-        font-size: 12px;
+  section.section-languages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h2 {
+      padding: 20px;
+    }
+    p {
+      margin-left: 20px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+
+      span {
+        margin: 0 5px;
       }
+    }
+  }
+
+  section.section-extra {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h2 {
+      padding-bottom: 20px;
+    }
+    p {
+      margin-left: 20px;
+      justify-content: center;
+      margin-bottom: 15px;
+      font-size: 14px;
     }
   }
 }
