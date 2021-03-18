@@ -12,3 +12,8 @@ hr.small-display {
     display: none;
   }
 }
+
+.a-bounce {
+  animation: lightSpeedInLeft;
+  animation-duration: 0.75s;
+}
