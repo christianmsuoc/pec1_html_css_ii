@@ -15,7 +15,7 @@
     <h2><a href="#main">ChristianMS</a></h2>
     <div class="mobile-nav-section">
         <button id="navbar-menu-button" class="navbar-menu-button"> MENU</button>
-        <nav id="mobile-nav" class="no-display">
+        <nav id="mobile-nav" class="no-display" aria-label="Navegación">
             <ul>
                 <li><a href="#main">Inicio</a></li>
                 <li><a href="#personal-information">Información personal</a></li>
@@ -30,7 +30,7 @@
     </div>
 
 
-    <nav class="desktop-nav">
+    <nav class="desktop-nav" aria-label="Navegación">
         <ul>
             <li><a href="#main">INICIO</a></li>
             <li><a href="#personal-information">INFORMACIÓN PERSONAL</a></li>
@@ -71,7 +71,7 @@
     <hr class="small-display">
 
     <section id="work-history" class="timeline-section">
-        <h2>Historia Laboral <i class="fas fa-briefcase"></i></h2>
+        <h2>Historia Laboral <i aria-hidden="true" class="fas fa-briefcase"></i></h2>
 
         <div class="timeline-entry">
             <div class="timeline">
@@ -115,7 +115,7 @@
     <hr class="small-display">
 
     <section id="formation" class="timeline-section">
-        <h2>Formación <i class="fas fa-graduation-cap"></i></h2>
+        <h2>Formación <i aria-hidden="true" class="fas fa-graduation-cap"></i></h2>
 
         <div class="timeline-entry">
             <div class="timeline">
@@ -157,146 +157,24 @@
     <hr class="small-display">
 
     <section id="technologies" class="section-technologies">
-        <h2>Tecnologías <i class="fas fa-memory"></i></h2>
+        <h2>Tecnologías <i aria-hidden="true" class="fas fa-memory"></i></h2>
 
-        <div class="technology-row">
-            <div>
-                <span>Java</span>
-            </div>
-            <div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i>
-            </div>
-        </div>
-
-        <div class="technology-row">
-            <div>
-                <span>Spring</span>
-            </div>
-            <div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i>
-            </div>
-        </div>
-
-        <div class="technology-row">
-            <div>
-                <span>JPA</span>
-            </div>
-            <div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i>
-            </div>
-
-        </div>
-
-        <div class="technology-row">
-            <div>
-                <span>Hibernate</span>
-            </div>
-            <div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-        </div>
-
-        <div class="technology-row">
-            <div>
-                <span>SQL</span>
-            </div>
-            <div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-
-        </div>
-
-        <div class="technology-row">
-            <div>
-                <span>MySQL</span>
-            </div>
-            <div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-        </div>
-
-        <div class="technology-row">
-            <div>
-                <span>Tomcat</span>
-            </div>
-            <div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-        </div>
-
-        <div class="technology-row">
-            <div>
-                <span>Angular 2</span>
-            </div>
-            <div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i>
-            </div>
-        </div>
-
-        <div class="technology-row">
-            <div>
-                <span>HTML</span>
-            </div>
-            <div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-        </div>
-
-        <div class="technology-row">
-            <div>
-                <span>CSS</span>
-            </div>
-            <div>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-        </div>
-
+        <div class="technology-row" data-technology="Java" data-technology-skill="3.5"></div>
+        <div class="technology-row" data-technology="Spring" data-technology-skill="3.5"></div>
+        <div class="technology-row" data-technology="JPA" data-technology-skill="3.5"></div>
+        <div class="technology-row" data-technology="Hibernate" data-technology-skill="3"></div>
+        <div class="technology-row" data-technology="SQL" data-technology-skill="3"></div>
+        <div class="technology-row" data-technology="MySQL" data-technology-skill="3"></div>
+        <div class="technology-row" data-technology="Tomcat" data-technology-skill="3"></div>
+        <div class="technology-row" data-technology="Angular2" data-technology-skill="3"></div>
+        <div class="technology-row" data-technology="HTML" data-technology-skill="2.5"></div>
+        <div class="technology-row" data-technology="CSS" data-technology-skill="2.5"></div>
     </section>
 
     <hr class="small-display">
 
     <section id="courses" class="section-courses">
-        <h2>Cursos <i class="fas fa-certificate"></i></h2>
+        <h2>Cursos <i aria-hidden="true" class="fas fa-certificate"></i></h2>
 
         <p>
             <a href="https://www.udemy.com/course/persistencia-de-datos-con-java/"> Persistencia de datos con Java</a>
@@ -333,7 +211,7 @@
     <hr class="small-display">
 
     <section id="languages" class="section-languages">
-        <h2>Idiomas <i class="fas fa-globe-europe"></i></h2>
+        <h2>Idiomas <i aria-hidden="true" class="fas fa-globe-europe"></i></h2>
 
         <p>
             <span>Castellano</span>
@@ -357,7 +235,7 @@
     <hr class="small-display">
 
     <section id="extra" class="section-extra">
-        <h2>Extra <i class="fas fa-globe-europe"></i></h2>
+        <h2>Extra <i aria-hidden="true" class="fas fa-globe-europe"></i></h2>
 
         <p>Participación en <a href="https://spain-skills.es/">Spainskills</a> como representante  de
             la comunidad autónoma de Galicia en SpainSkills 2008 (Area de Sistemas)</p>

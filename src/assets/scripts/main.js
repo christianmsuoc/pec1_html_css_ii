@@ -3,6 +3,7 @@ window.$ = window.jQuery = jquery;
 require("jquery/dist/jquery.min.js");
 
 $(function() {
+  drawTechnologyStars();
   const mobileNav = $('#mobile-nav');
 
   /* Toggle nav */
@@ -19,9 +20,29 @@ $(function() {
     mobileNav.addClass('no-display');
   });
 
-  $('a').on('click', function(event) {
-    mobileNav.addClass('no-display');
-  });
+  $('a').on('click', () => mobileNav.addClass('no-display'));
+
 });
+
+function drawTechnologyStars() {
+  const technologyRows = $('.technology-row');
+  technologyRows.each( (index, tec) => {
+    const tecName = $(tec).data('technology');
+    const tecSkill = $(tec).data('technology-skill');
+    if (tecName && tecSkill) {
+      const fullStars = Math.floor(tecSkill);
+      const halfStars = Math.ceil(tecSkill % 1);
+      const emptyStars = 5 - halfStars - fullStars;
+
+      const icons =
+        '<i class="fas fa-star"></i>'.repeat(fullStars) +
+        '<i class="fas fa-star-half-alt">'.repeat(halfStars) +
+        '<i class="far fa-star"></i>'.repeat(emptyStars);
+
+      $(tec).append(`<div><span>${tecName}</span></div>`)
+      $(tec).append(`<div>${icons}</div>`)
+    }
+  });
+}
 
 
