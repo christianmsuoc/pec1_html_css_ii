@@ -36,7 +36,7 @@ function drawTechnologyStars() {
 
       const icons =
         '<i class="fas fa-star"></i>'.repeat(fullStars) +
-        '<i class="fas fa-star-half-alt">'.repeat(halfStars) +
+        '<i class="fas fa-star-half-alt"></i>'.repeat(halfStars) +
         '<i class="far fa-star"></i>'.repeat(emptyStars);
 
       $(tec).append(`<div><span>${tecName}</span></div>`)
