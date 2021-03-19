@@ -122,12 +122,6 @@ main {
     flex-direction: column;
     align-items: center;
 
-
-    h2 {
-      padding: 20px;
-      justify-self: flex-start;
-    }
-
     p {
       margin-bottom: 15px;
 
@@ -154,10 +148,6 @@ main {
       justify-content: flex-start;
     }
 
-    h2 {
-      padding: 20px;
-    }
-
     p {
       margin-left: 20px;
       display: flex;
@@ -175,11 +165,6 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-    }
-
-
-    h2 {
-      padding-bottom: 20px;
     }
 
     p {
@@ -300,19 +285,17 @@ main {
       flex-flow: row wrap;
       justify-content: center;
       flex: 1;
-      padding: 0 5px;
     }
 
     h2 {
       flex: 100%;
-      margin-bottom: 20px;
     }
 
     .technology-row {
       flex: 1;
       display: flex;
-      padding: 5px;
       min-width: 40%;
+      max-width: 45%;
       justify-content: center;
 
       @media (min-width: $screenMobile + 1) {
@@ -327,6 +310,7 @@ main {
         flex: 1;
         display: flex;
         justify-content: center;
+        justify-items: center;
 
         i {
           margin: 0;

@@ -85,6 +85,12 @@ body {
       border: solid 1px darken($primaryTextColor, 70%);
       color: $secondaryTextColor;
     }
+
+    section {
+      h2 {
+        margin-bottom: 40px;
+      }
+    }
   }
 
   * {
